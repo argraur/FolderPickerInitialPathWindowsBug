@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FolderPickerInitialPath.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="This demo was created to show that InitialPath doesn't affect behavior of FolderPicker at all"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Entry x:Name="InitialPath"
+                   Text="C:\Program Files" />
+
+            <HorizontalStackLayout Spacing="12" HorizontalOptions="Center">
+                <Button
+                    x:Name="InitialPathPicker"
+                    Text="Pick folder w/ initial path"
+                    Clicked="OnInitialPathPickerClicked" />
+                <Button
+                    x:Name="NoInitialPathPicker"
+                    Text="Pick folder w/o initial path"
+                    Clicked="OnNoInitialPathPickerClicked" />
+            </HorizontalStackLayout>
+            
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
